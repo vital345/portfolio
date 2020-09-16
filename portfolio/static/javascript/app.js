@@ -15,17 +15,17 @@ function setTheme(mode){
     let cssID = document.getElementById('theme-style');
     switch (mode) {
         case 'light' :
-            cssID.href = '../static/css/style.css';
+            cssID.href = './static/css/style.css';
             break;
         case 'blue' :
-            cssID.href = '../static/css/blue.css';
+            cssID.href = './static/css/blue.css';
             break;
         case 'dark' :
-            cssID.href = '../static/css/dark.css';
+            cssID.href = './static/css/dark.css';
             break;
 
         default :
-            cssID.href = '../static/css/style.css';
+            cssID.href = './static/css/style.css';
             break;
 
     }
