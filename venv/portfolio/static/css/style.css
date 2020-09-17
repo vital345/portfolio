@@ -34,6 +34,7 @@ p, li, span, label, input, textarea{
     color: var(--secondaryText);
 }
 
+
 a{
     text-decoration: none;
     color: #17a2b8;
@@ -313,6 +314,10 @@ ul{
     color: #ffffff;
     background-color: var(--buttonColor);
     border: none;
+}
+
+label{
+    font-family: 'Roboto Mono', monospace;
 }
 
 span{

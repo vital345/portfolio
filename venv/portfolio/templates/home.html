@@ -114,18 +114,18 @@
     <section class="s2">
         <div class="main-container">
             <h3 style="text-align:center">Get in touch</h3>
-            <form id="contact-form" action="/contact" method="POST">
-                <label for="Name" style="font-family: 'Roboto Mono', monospace;">Name</label>
-                <input type="text" style="font-family: 'Roboto Mono', monospace;" name="name" class="input-field">
+            <form id="contact-form" name="myForm" action="/contact" onsubmit="return validateForm()" method="POST">
+                <label for="Name">Name</label>
+                <input type="text" name="name" class="input-field" required>
 
-                <label for="Subject" style="font-family: 'Roboto Mono', monospace;">Subject</label>
-                <input type="text" style="font-family: 'Roboto Mono', monospace;" class="input-field" name="subject">
+                <label for="Subject">Subject</label>
+                <input type="text" class="input-field" name="subject" required>
 
-                <label for="Email" style="font-family: 'Roboto Mono', monospace;">Email</label>
-                <input type="email" style="font-family: 'Roboto Mono', monospace;" name="email" class="input-field">
+                <label for="Email">Email</label>
+                <input type="email" name="email" class="input-field" required>
 
-                <label for="Message" style="font-family: 'Roboto Mono', monospace;">Message</label>
-                <textarea type="text" style="font-family: 'Roboto Mono', monospace; " name="message" class="input-field"></textarea>
+                <label for="Message">Message</label>
+                <textarea type="text " name="message" class="input-field" required></textarea>
 
                 <input id="submit-btn" type="submit" value="Send">
             </form>
@@ -134,7 +134,7 @@
 
 
 
-    <script src="../static/javascript/app.js"></script>
+    <script src="{{ url_for('static', filename='javascript/app.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

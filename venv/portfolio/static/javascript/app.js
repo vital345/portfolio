@@ -61,4 +61,35 @@ function complete(){
 }
 
 
+// function validateForm(){
+//     var formName = document.forms['myForm']['name'].value;
+//     var formSubject = document.forms['myForm']['subject'].value;
+//     var formEmail = document.forms['myForm']['Email'].value;
+//     var formMessage = document.forms['myForm']['Message'].value;
 
+//     if (ValidateEmail(formEmail)){
+//         return true;
+//     }
+//     if (formName.length > 2 && formName.length < 25 ){
+//         return true;
+//     }
+//     if (formSubject.length > 2 && formSubject.length < 100){
+//         return true;
+//     }
+//     if (formMessage.length > 2 && formMessage.length < 250){
+//         return true;
+//     }
+//     else{
+//         return false
+//     }
+// }
+
+// function ValidateEmail(mail) 
+// {
+//  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+//   {
+//     return (true)
+//   }
+//     alert("You have entered an invalid email address!")
+//     return (false)
+// }
