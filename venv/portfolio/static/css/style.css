@@ -290,8 +290,10 @@ ul{
     background-color: var(--secondaryColor);
     border-radius: 5px;
     border: 1px solid var(--borderColor);
-    font-size: 14px;
-    color: var(--secondaryText)
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 21px;
+
 }
 
 #contact-form{
