@@ -17,7 +17,7 @@
     <section class="s1">
         <div class="main-container">
             <div class="greeting-wrapper">
-                <h1>Hi, I'm Vital</h1>
+                <h1 class="fancy">Hi, I'm Vital</h1>
             </div>
 
             <div class="intro-wrapper">
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="left-column">
-                    <img id="profile-pic" src="../images/profile.jpg" alt="profile pic">
+                    <img id="profile-pic" src="{{ url_for('static', filename='images/profile.jpg' ) }}" alt="profile pic">
                     <h5 style="text-align:center; line-height: 0;font-family: 'Titillium Web', sans-serif;" class="mt-2 mb-2">Select Themes</h5>
                     <div id="theme-option-wrapper">
                         <div data-mode="light" id="light-mode" class="theme-dot"></div>
@@ -90,10 +90,10 @@
                         <p class="border-top border-dark">Contact me at</p>
                         <div class="social-links">
                             <ul>
-                                <li><a target="_blank" href="https://twitter.com/upadhyayavittal"><img src="../images/23681.png" alt="twiiter"></a></li>
-                                <li><a target="_blank" href="https://www.instagram.com/vittal2823/"><img src="../images/pngwing.com (1).png" alt="instagram"></a></li>
-                                <li><a target="_blank" href="https://www.facebook.com/vittal.rupadhyaya"><img src="../images/pngwing.com.png" alt="facebook"></a></li>
-                                <li><a target="_blank" href="https://github.com/vital345/"><img src="../images/github.png" alt="github"></a></li>
+                                <li><a target="_blank" href="https://twitter.com/upadhyayavittal"><img src="{{ url_for('static', filename='images/23681.png' ) }}" alt="twiiter"></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/vittal2823/"><img src="{{ url_for('static', filename='images/pngwing.com (1).png' ) }}" alt="instagram"></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/vittal.rupadhyaya"><img src="{{ url_for('static', filename='images/pngwing.com.png' ) }}" alt="facebook"></a></li>
+                                <li><a target="_blank" href="https://github.com/vital345/"><img src="{{ url_for('static', filename='images/github.png' ) }}" alt="github"></a></li>
                             </ul>
                         </div>
                 </div>
@@ -114,7 +114,7 @@
     <section class="s2">
         <div class="main-container">
             <h3 style="text-align:center">Get in touch</h3>
-            <form id="contact-form" action="">
+            <form id="contact-form" action="/contact" method="POST">
                 <label for="Name" style="font-family: 'Roboto Mono', monospace;">Name</label>
                 <input type="text" name="name" class="input-field">
 

@@ -8,7 +8,7 @@ for(var i=0; i<themeDots.length; i++){
         setTheme(modes);
         
     })
-    // console.log(themeDots[i].getAttribute('data-mode'));
+    
 }
 
 function setTheme(mode){
@@ -32,9 +32,33 @@ function setTheme(mode){
 
 }
 
-// for(var i=0; i<themeDots.length ; i++){
-//     themeDots[i].addEventListener('click', () =>{
-//         // let modes = this.dataset.mode
-//         console.log(`cliked item is ${themeDots}`)
-//     })
-// }
+
+
+const text = document.querySelector('.fancy');
+const strText = text.textContent;
+const splitText = strText.split('');
+text.textContent = '';
+for(let i=0; i < splitText.length; i++){
+    text.innerHTML += '<span>' + splitText[i] + '</span>';
+}
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick(){
+    const spanchar = text.querySelectorAll('span')[char];
+    spanchar.classList.add('faded');
+    char ++;
+    if (char === splitText.length){
+        complete();
+        return;
+    }
+}
+
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
+
+
+
