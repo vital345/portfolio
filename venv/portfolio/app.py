@@ -44,8 +44,8 @@ def contact_email():
         msg.set_content(message)
         smtp.send_message(msg)
 
-    return 'wait....'
-    # redirect(url_for('home'))
+    return redirect(url_for('home'))
+    # 
 
 
 if __name__ =='__main__':
