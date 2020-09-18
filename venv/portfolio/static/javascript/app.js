@@ -61,35 +61,30 @@ function complete(){
 }
 
 
-// function validateForm(){
-//     var formName = document.forms['myForm']['name'].value;
-//     var formSubject = document.forms['myForm']['subject'].value;
-//     var formEmail = document.forms['myForm']['Email'].value;
-//     var formMessage = document.forms['myForm']['Message'].value;
+function validateForm(){
+    var formName = document.forms['myForm']['name'].value;
+    var formSubject = document.forms['myForm']['subject'].value;
+    var formEmail = document.forms['myForm']['email'].value;
+    var formMessage = document.forms['myForm']['message'].value;
 
-//     if (ValidateEmail(formEmail)){
-//         return true;
-//     }
-//     if (formName.length > 2 && formName.length < 25 ){
-//         return true;
-//     }
-//     if (formSubject.length > 2 && formSubject.length < 100){
-//         return true;
-//     }
-//     if (formMessage.length > 2 && formMessage.length < 250){
-//         return true;
-//     }
-//     else{
-//         return false
-//     }
-// }
+    console.log(formSubject.length)
 
-// function ValidateEmail(mail) 
-// {
-//  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
-//   {
-//     return (true)
-//   }
-//     alert("You have entered an invalid email address!")
-//     return (false)
-// }
+    if (formName.length == null || formName.length < 2){
+        M.toast({html: "You have entered an invalid Name!", classes: 'rounded'});
+        return false;
+    }
+
+    if (formSubject.length == null || formSubject.length < 20){
+        M.toast({html: "You have entered invalid subject!!!", classes: 'rounded'});
+        return false;
+    }
+
+    if (formMessage.length == null || formMessage.length < 100){
+        M.toast({html: "You have entered invalid message !!!", classes: 'rounded'});
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
