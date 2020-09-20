@@ -70,17 +70,17 @@ function validateForm(){
     console.log(formSubject.length)
 
     if (formName.length == null || formName.length < 2){
-        M.toast({html: "You have entered an invalid Name!\nitshould have more than three characters", classes: 'rounded'});
+        M.toast({html: "You have entered an invalid Name! \n itshould have more than three characters", classes: 'rounded'});
         return false;
     }
 
     if (formSubject.length == null || formSubject.length < 20){
-        M.toast({html: "You have entered invalid subject!!!\nit should have more than 20 characters", classes: 'rounded'});
+        M.toast({html: "You have entered invalid subject!!! \n it should have more than 20 characters", classes: 'rounded'});
         return false;
     }
 
     if (formMessage.length == null || formMessage.length < 100){
-        M.toast({html: "You have entered invalid message !!!\n it should have more than 100 character", classes: 'rounded'});
+        M.toast({html: "You have entered invalid message !!! \n it should have more than 100 character", classes: 'rounded'});
         return false;
     }
     else{
